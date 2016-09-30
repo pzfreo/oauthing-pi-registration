@@ -1,0 +1,11 @@
+version: '2'
+services:
+  reg:
+      build: 
+         context: .
+         dockerfile: Dockerfile
+      image: pizak/pi-reg 
+      devices:
+         - "/dev/usb/lp0:/dev/lp0"
+
+
