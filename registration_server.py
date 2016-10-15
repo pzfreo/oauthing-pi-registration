@@ -48,8 +48,8 @@ def on_message(client,userdata,msg):
   if (msg.topic=="/mfr/pres"):
 	print (msg.payload)
   	deviceid = str(json.loads(msg.payload)['d'])
-#   	if (deviceid in seen):
-#   		return
+   	if (deviceid in seen):
+   		return
  
 	seen.add(deviceid)
 	client.user_data_set({'seen':seen})
